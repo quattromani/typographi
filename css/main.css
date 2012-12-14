@@ -1,0 +1,663 @@
+/* Unchanged */
+/* ==========================================================================
+   	Contents for Typography sandbox
+   ========================================================================== */
+
+/*
+ * Base: Colors
+ 
+ * Base: Defaults
+ 		* Reset
+ 		* HTML5 Display Definitions
+ 		* Clearfix
+ 		* Base Structure
+ 
+ * Base: Font-Face
+ 
+ * Base: Links, Typography, figures, Images, Lists, Forms, Tables
+ 		
+ 		* modular scale *
+ 		http://modularscale.com/scale/?px1=16&px2=&ra1=1.618&ra2=0
+		16px @ 1:1.618
+ 
+ * Base: Helper Classes
+ 
+ * Layout
+ 
+ * Module
+ 
+ * State
+ 
+ * Theme
+ 
+ * Browser Specific
+ 		* Webkit: Chrome/Safari
+ 		* Firefox
+ 		* IE: 6/7/8/9
+ 
+ * Responsive Design
+ 
+ * Print Styles
+ 
+ */
+
+
+
+
+
+/* ==========================================================================
+   	Base: Colors
+   ========================================================================== */
+/* 
+ 
+ 334433 - moss green
+ 6699aa - dull blue
+ e1e1e1 - light gray
+ aacccc - light blue
+ 447799 - deeper blue
+ 
+*/
+
+
+
+
+
+/* ==========================================================================
+   	Base: Defaults
+   ========================================================================== */
+ 
+/* ==========================
+	Reset
+   ========================== */
+   
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	background: transparent;
+	vertical-align: baseline;
+	font-size: 100%;
+}	
+
+/* ==========================
+	HTML5 Display Definitions
+   ========================== */
+
+article, 
+aside, 
+figure, 
+footer, 
+header, 
+hgroup, 
+nav, 
+section {
+	display: block;
+}
+
+audio, 
+canvas, 
+video {
+	display: inline-block;
+	*display: inline; 
+	*zoom: 1;
+}
+
+audio:not([controls]) { display: none; }
+
+/* ==========================
+	Clearfix
+   ========================== */
+   
+.clearfix { *zoom: 1; }
+.clearfix:before,
+.clearfix:after { 
+	display: table; 
+	content: ""; 
+	line-height: 0; 
+}
+.clearfix:after { clear: both; }
+
+/* ==========================
+	Base Stucture
+   ========================== */
+   
+* {
+  	-webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+          	box-sizing: border-box;
+}
+   
+html {
+	overflow-y: scroll; /* Force a scrollbar in non-IE */
+	height: 100%;
+	font-size: 62.5%; /* set base font size to 10px, making em/rem conversion simpler */
+	-webkit-text-size-adjust: 100%; /* prevent iOS text size adjust on orientation change without disabling user zoom */
+		-ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0 auto;
+	min-height: 100%;
+}
+
+body, 
+button, 
+input, 
+select, 
+textarea {
+	background: #ececec; 
+	font-size: 16px; /* scale origin */
+	font: 1.6rem Arial, sans-serif;
+	line-height: 1.443; /* baseline 'leading' chosen from modular scale (f*(φ^-6)) - keep this unitless */
+	color: #222; 
+}
+
+
+
+
+
+/* ==========================================================================
+   Base: Font-Face
+   ========================================================================== */
+   
+@font-face {
+	font-family: 'Iconic';
+	src: url('fonts/Iconic/fill/iconic_fill.eot?#iefix') format('embedded-opentype'),
+	url('fonts/Iconic/fill/iconic_fill.woff') format('woff'),
+	url('fonts/Iconic/fill/iconic_fill.ttf') format('truetype'),
+	url('fonts/Iconic/fill/iconic_fill.svg#svgIconic') format('svg');
+}
+
+@font-face {
+	font-family: 'Iconic_Stroke';
+	src: url('fonts/Iconic/stroke/iconic_stroke.eot?#iefix') format('embedded-opentype'),
+	url('fonts/Iconic/stroke/iconic_stroke.woff') format('woff'),
+	url('fonts/Iconic/stroke/iconic_stroke.ttf') format('truetype'),
+	url('fonts/Iconic/stroke/iconic_stroke.svg#svgIconic_Stroke') format('svg');
+}
+
+
+
+
+
+/* ==========================================================================
+   Base: Links, Typography, Figures, Images, Lists, Forms, Tables
+   ========================================================================== */
+
+/* ==========================
+	Links
+   ========================== */
+   
+a { 
+	margin: 0; 
+	padding: 0; 
+	background: transparent; 
+	vertical-align: baseline; 
+	font-size: 100%;
+}
+
+a:link,
+a:visited {
+	color:#3275aa;
+	text-decoration:none;
+}
+
+a:focus {
+  	outline: thin dotted #333;
+  	outline: 5px auto -webkit-focus-ring-color;
+  	outline-offset: -2px;
+}
+
+a:hover, 
+a:active { 
+	outline: 0; 
+}
+
+/* ==========================
+	Typography
+   ========================== */
+
+html {
+	text-rendering: optimizelegibility;	
+	-webkit-font-smoothing: antialiased;
+	   -moz-font-smoothing: antialiased;
+	    -ms-font-smoothing: antialiased;
+	     -o-font-smoothing: antialiased;
+	        font-smoothing: antialiased;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 { 
+	font-family: Georgia, Times, "Times New Roman", serif; 
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 42px; /* 16 × (φ2) = 42px */
+	font-size: 4.2rem;
+}
+
+h2 {
+	font-size: 26px; /* 16 × φ = 26px */	
+	font-size: 2.6rem; 
+}
+
+h3 {
+	font-size: 20px; /* 16 × sqrt(φ) = 20px */
+	font-size: 2.0rem; 
+}
+
+small { 
+	font-size: 13px; /*  16 × (1 ÷ sqrt(φ)) = 13px */ 
+	font-size: 1.3rem;
+}
+
+p,
+blockquote,
+small { 	
+	margin: 1.443em 0; 
+}
+
+p {
+	-webkit-hyphens: auto;
+	   -moz-hyphens: auto;
+		    hyphens: auto;
+	hyphenate-before: 2;
+  	hyphenate-after: 3;
+  	hyphenate-lines: 2;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup { top: -0.5em; }
+
+sub { bottom:0.25em; }
+
+del { text-decoration: line-through; }
+
+ins {
+	background: #ff9;
+	color: #222;
+	text-decoration: none;
+}
+
+dfn { font-style: italic; }
+
+mark {
+	background: #ff0;
+	color: #222;
+	font-style: italic;
+	font-weight: bold;
+}
+
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, monospace;
+	_font-family: 'courier new', monospace;	
+}
+
+pre {
+	white-space: pre;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+
+code {
+	padding: 2px 4px;
+	color: #d14;
+	background-color: #f7f7f9;
+	border: 1px solid #e1e1e8;
+}
+
+q { quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+hr {
+    display: block;
+    margin: 1em 0;
+    padding: 0;
+    height: 0.0625rem;
+    border: 0;
+    border-top: 0.0625rem solid #d3d3d3;
+}
+
+abbr { letter-spacing: 0.1em; }
+
+
+
+
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 20px 2%;
+}
+
+header[role="banner"] { 
+	margin-bottom: 30px;
+}
+
+.main { 
+
+}
+
+section { 
+}
+
+article { 
+	float: left;
+}
+
+aside { 
+	float: right;
+	width: 30%;
+}
+
+footer { 
+	clear: left;
+}
+
+
+
+
+
+/* ==========================================================================
+   Module
+   ========================================================================== */
+
+nav { 
+
+}
+
+	nav[role="navigation"] li {
+    	float: left;
+    	margin: 0 2.5% 25px; /* horizontal margin + width should equal 100% */
+    	width: 20%;
+    	text-align: center;
+    	list-style: none;
+	}
+	
+	nav[role="navigation"] li.last {
+    	margin-right: 0;
+	}
+	
+	nav[role="navigation"] li a {
+	    display: block;
+	    float: left;
+	    width: 100%;
+	    font-size: 16px;
+	    font-size: 1.6rem;
+	    color: #fc6b35;
+	    letter-spacing: 2px;
+	    text-decoration: none;
+	    text-transform: uppercase;
+	}
+
+p { max-width: 30em; } /* 'magic number' will achive close to 75 CPL regardless of font-size, mileage may vary */
+
+.eighteen h2 {
+	font-size: 29px; /* 18px * φ = 29px */
+	font-size: 2.9rem;
+}
+
+.eighteen p {
+	font-size: 18px;
+	font-size: 1.8rem;
+}
+
+.twenty h2 {
+	font-size: 32px; /* 20px * φ = 32px */
+	font-size: 3.2rem;
+}
+
+.twenty p {
+	font-size: 20px;
+	font-size: 2.0rem;
+}
+
+.twentyfour h2 {
+	font-size: 39px; /* 24px * φ = 39px */
+	font-size: 3.9rem;
+}
+
+.twentyfour p {
+	font-size: 24px;
+	font-size: 2.4rem;
+}
+
+.small h2 {
+	font-size: 21px; /* 13px * φ = 21px */
+	font-size: 2.1rem;
+}
+
+.small { 
+	max-width: 30em;
+	margin: 1.443em 0;
+	font-size: 13px;
+	font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   State
+   ========================================================================== */
+
+
+
+
+
+
+/* ==========================================================================
+   Theme
+   ========================================================================== */
+
+.icon { font-family: Entypo; }
+
+
+
+
+
+/* ==========================================================================
+   Browser Specific
+   ========================================================================== */
+
+/* ==========================
+	Webkit: Chrome/Safari
+   ========================== */
+   
+/* Chrome Frame Prompt */
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #222;
+    padding: 0.2em 0;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, 
+input, 
+select, 
+textarea {
+	margin: 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Styles  */
+}
+
+/* ==========================
+	Firefox
+   ========================== */
+   
+@-moz-document url-prefix() { 
+	/* Styles */
+}
+
+/* ==========================
+	IE: 6/7/8/9
+   ========================== */
+   
+/* ie (.ie) */   
+/* make buttons play nice in IE */
+button { 
+	overflow: visible;
+	width: auto;
+}
+
+/* scale images in IE7 more attractively */
+.ie img {-ms-interpolation-mode: bicubic;}
+
+
+/* ie6 (.ie6) */
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));} 
+.ie6 input {vertical-align: text-bottom;}
+
+/* ie7 (.ie7) */
+ 	/* Styles */
+
+/* ie8 (.ie8) */
+	/* Styles */
+
+/* ie9 (.ie9) */
+	/* Fix IE9 overflow bug */
+	.ie9 svg:not(:root) { overflow: hidden; }
+
+
+
+
+
+/* ==========================================================================
+   Responsive Design
+   ========================================================================== */
+
+/* ==========================
+	Desktop
+   ========================== */
+
+@media (max-width: 64em) {
+	.wrapper { padding: 20px 5%;}
+}
+
+/* ==========================
+	Tablet
+   ========================== */   
+
+@media (max-width: 50em) {
+	header[role="banner"] {
+		text-align: center;
+	}
+	article,
+	aside {
+		clear: both;
+		width: 100%;
+	}
+}
+   
+/* ==========================
+	SmartPhone
+   ========================== */   
+
+@media (max-width: 30em) {
+	nav[role="navigation"] li {
+		width: 45%;
+	}
+}
+
+/* ==========================
+	Retina
+   ========================== */ 
+   
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+  
+/* Retina-specific stuff here */
+
+}
+
+/* ==========================
+	IE10 Snap Mode
+   ========================== */ 
+@media screen 
+and (max-width:400px) {
+    @-ms-viewport {
+  		width: device-width;
+    	/* Styles */
+	}
+}
+
+
+
+
+
+/* ==========================================================================
+   Print Styles 
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,a:visited { text-decoration: underline; }
+
+    a[href]:after { content: " (" attr(href) ")"; }
+
+    abbr[title]:after { content: " (" attr(title) ")"; }
+
+    /* Don't show links for images, or javascript/internal links */
+    tr,
+    img {
+    	page-break-inside: avoid;
+    }
+
+    img {max-width: 100% !important;}
+
+    @page {margin: 0.5cm;}
+
+    p,
+    h2,
+    h3 {	
+    	orphans: 3;
+    	widows: 3;
+    }
+
+    h2,
+    h3 {
+   		page-break-after: avoid;
+   	}
+}
+
